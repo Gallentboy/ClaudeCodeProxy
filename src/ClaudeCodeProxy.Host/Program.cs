@@ -64,6 +64,8 @@ public static class Program
             Log.Information("运行 '{ExecutableName} --install-service' 以管理员身份安装服务",
                 Environment.ProcessPath ?? "ClaudeCodeProxy.Host.exe");
         }
+        await app.RunAsync();
+    }
 
     private static async Task<bool> HandleCommandLineArgumentsAsync(string[] args)
     {
