@@ -67,7 +67,8 @@ public static class Program
             Log.Information("运行 '{ExecutableName} --install-service' 以管理员身份安装服务",
                 Environment.ProcessPath ?? "ClaudeCodeProxy.Host.exe");
         }
-
+	// 在应用启动时添加日志
+	Console.WriteLine($"TieredCompilation: {AppContext.TryGetSwitch("System.Runtime.TieredCompilation", out bool enabled) && enabled}");
         await app.RunAsync();
     }
 

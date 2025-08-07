@@ -5,6 +5,11 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RuntimeIdentifier>linux-arm64</RuntimeIdentifier>
+        <!-- 禁用 ReadyToRun 编译，避免架构问题 -->
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <!-- 禁用单一文件发布，避免架构问题 -->
+        <PublishSingleFile>false</PublishSingleFile>
     </PropertyGroup>
 
     <ItemGroup>
