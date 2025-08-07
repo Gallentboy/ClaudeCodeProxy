@@ -9,6 +9,8 @@ ENV DOTNET_JitStress=0
 ENV DOTNET_JitMinOpts=0
 ENV DOTNET_ReadyToRun=0
 ENV TZ=Asia/Shanghai
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo "Asia/Shanghai" > /etc/timezone
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
